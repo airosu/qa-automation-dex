@@ -9,15 +9,20 @@ runner = HTMLTestRunner_dex.HTMLTestRunner(
     verbosity=1
 )
 
-config.ENVIRONMENT = 'staging'
-
-
-
-
 small = small_suite_list()
 full = full_suite_list()
 
 
-# ============== RUN COMMAND =====================
+
+
+
+# ============== CONFIGURATIONS =====================
+
+config.ENVIRONMENT = 'staging'
+config.SCREEN = 2
+
+
+
+# =============== RUN COMMAND =======================
 
 runner.run(full)
