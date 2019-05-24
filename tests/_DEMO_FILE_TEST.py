@@ -3,6 +3,9 @@ from unittest import TestCase
 from dex_library.functions import Dex, repeat
 from common.functions import DEMO
 from POM._DEMO_FILE_POM import DemoPom
+import config
+import pyautogui
+import time
 
 
 class Test1(TestCase):
@@ -11,7 +14,7 @@ class Test1(TestCase):
     @classmethod
     def setUpClass(cls):
         cls.driver = webdriver.Chrome()
-        Dex(cls.driver).driver_setup(screens=1)
+        Dex(cls.driver).driver_setup(config.SCREEN)
     @classmethod
     def tearDownClass(cls):
         cls.driver.quit()
@@ -26,7 +29,30 @@ class Test1(TestCase):
     def test_02_search_for_keyword(self):
         """ Search for 'selenium' keyword """
 
-        pass
+        DemoPom(self.driver).google_search_field('selenium')
+        pyautogui.press('enter')
+        
+
+
+    def test_03_open_link(self):
+        """ Open 'selenium' webpage from search results """
+
+        DemoPom(self.driver).selenium_link()
+
+    
+    def test_04_search_for_python_keyword(self):
+        """ Search for 'python' keyword """
+
+        DemoPom(self.driver).selenium_search_field('python')
+        DemoPom(self.driver).selenium_search_submit()
+        time.sleep(5)
+
+
+
+
+
+
+
 
 
 
@@ -48,6 +74,11 @@ class Test2(TestCase):
     def test_04(self):
         """ Step 4 of set """
         self.fail('This is the reason for failing.')
+
+
+
+
+
 
 
 class TestUsingRepeat(TestCase):

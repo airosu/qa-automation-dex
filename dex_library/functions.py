@@ -1,10 +1,10 @@
+import config
 import platform
 import random
 import string
 import time
 import requests
 import json
-import platform
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support import expected_conditions as EC
