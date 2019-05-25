@@ -19,7 +19,7 @@ full = full_suite_list()
 # ============== CONFIGURATIONS =====================
 
 config.ENVIRONMENT = 'staging'
-config.SCREEN = 2
+config.SCREEN = 1
 
 
 

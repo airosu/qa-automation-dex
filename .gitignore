@@ -1,4 +1,5 @@
 *.pyc
+*.html
 *.log
 *.txt
 */__pycache__/*

@@ -45,7 +45,7 @@ class Test1(TestCase):
 
         DemoPom(self.driver).selenium_search_field('python')
         DemoPom(self.driver).selenium_search_submit()
-        time.sleep(5)
+        time.sleep(3)
 
 
 
